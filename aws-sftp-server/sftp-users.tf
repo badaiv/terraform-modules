@@ -1,6 +1,6 @@
 module "sftpusers" {
   for_each = var.user_map
-  source = "../aws-sftp-user"
+  source = "./modules/aws-sftp-user"
 
   username       = each.key
   sshkey         = each.value
